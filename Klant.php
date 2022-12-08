@@ -15,14 +15,9 @@ if ($_SESSION['role'] != 'Klant') {
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
-<div class="navbar">
-    <form action="PHP/action.php" method="post" id="nav">
-    <a href="Home.php"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a class="active" href="#"><i class="fa fa-fw fa-list"></i>Overzicht</a>
-    <a href="Geleend.php"><i class="fa fa-fw fa-shopping-basket"></i>Borrowed Books</a>
-    <a href="Gereserveerd.php"><i class="fa fa-fw fa-list"></i>Reservations</a>
-    </form>
-</div>
+<?php
+include 'includes/nav/klantnav.inc.php';
+?>
 <div class="Table,con">
     <form action="PHP/action.php" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">

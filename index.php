@@ -12,14 +12,9 @@ session_unset();
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
-<div class="navbar">
-    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="Login.php"><i class="fa fa-fw fa-sign-in"></i> Login</a>
-    <a href="Register.php"><i class="fa fa-fw fa-user-circle"></i> Register</a>
-    <a href="Selection.php"><i class="fa fa-fw fa-search"></i> Selection</a>
-    <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-    <a href="#"><i class="fa fa-fw fa-info-circle"></i> Info</a>
-</div>
+<?php
+include 'includes/nav/homenav.inc.php';
+?>
 <div class="Logobox">
     <img src="Image/BOS2.png" alt="Book On Shelf">
     <h1>

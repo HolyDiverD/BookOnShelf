@@ -14,12 +14,9 @@ if ($_SESSION['role'] != 'Admin') {
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
-<div class="navbar">
-    <a href="Home.php"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="Admin.php"><i class="fa fa-fw fa-list"></i>Overview</a>
-    <a class="active" href="#"><i class="fa fa-fw fa-shopping-basket"></i>Add</a>
-    <a href="Aanpassen.php"><i class="fa fa-fw fa-list"></i>Edit</a>
-</div>
+<?php
+include 'includes/nav/adminnav.inc.php';
+?>
 <div class="Table,con">
     <form action="PHP/action.php" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">

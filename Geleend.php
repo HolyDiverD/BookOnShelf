@@ -14,13 +14,9 @@ if ($_SESSION['role'] != 'Klant') {
 
 </head>
 <body>
-
-<div class="navbar">
-    <a href="Home.php"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="Klant.php"><i class="fa fa-fw fa-list"></i>Overview</a>
-    <a class="active" href="#"><i class="fa fa-fw fa-shopping-basket"></i>Borrowed Books</a>
-    <a href="Gereserveerd.php"><i class="fa fa-fw fa-list"></i>Reservations</a>
-</div>
+<?php
+include 'includes/nav/klantnav.inc.php';
+?>
 <div class="Table,con">
     <form action="PHP/action.php" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
