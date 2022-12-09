@@ -1,25 +1,6 @@
-<?php
-session_start();
-if ($_SESSION['role'] != 'Klant') {
-    header('Location: Login.php');
-
-}
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Book On Shelf</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="CSS/Style.css">
-</head>
-<body>
-<?php
-include 'includes/nav/klantnav.inc.php';
-?>
+</body>
 <div class="Table,con">
-    <form action="PHP/action.php" method="post" id="search">
+    <form action="../../actions/action.php" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
         <button class="LendB" type="button"> <i class="fa fa-fw fa-shopping-basket"></i>Borrow</button>
         <button class="ReserveB" type="button"> <i class="fa fa-fw fa-list"></i>Reserve</button>
@@ -36,17 +17,17 @@ include 'includes/nav/klantnav.inc.php';
         </tr>
         <?php
         for ($i = 0; $i <= 11; $i++){
-        ?>
-        <tr>
-            <td data-label="Title">The Witcher</td>
-            <td data-label="Writer">Andrzej Sapkowski</td>
-            <td data-label="Genre">Fantasy</td>
-            <td data-label="ISBN">9788090091252</td>
-            <td data-label="Language">English</td>
-            <td data-label="Pages">288</td>
-            <td data-label="Amount">5</td>
-        </tr>
-        <?php
+            ?>
+            <tr>
+                <td data-label="Title">The Witcher</td>
+                <td data-label="Writer">Andrzej Sapkowski</td>
+                <td data-label="Genre">Fantasy</td>
+                <td data-label="ISBN">9788090091252</td>
+                <td data-label="Language">English</td>
+                <td data-label="Pages">288</td>
+                <td data-label="Amount">5</td>
+            </tr>
+            <?php
         }
         ?>
     </table>

@@ -1,26 +1,7 @@
-<?php
-session_start();
-if ($_SESSION['role'] != 'Klant') {
-    header('Location: Login.php');
-} ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Book On Shelf</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="CSS/Style.css">
-
-</head>
-<body>
-<?php
-include 'includes/nav/klantnav.inc.php';
-?>
 <div class="Table,con">
     <form action="PHP/action.php" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
-        <button class="LendB" type="button"> <i class="fa fa-fw fa-arrow-circle-left"></i>Hand in</button>
+        <button class="LendB" type="button"> <i class="fa fa-fw fa-trash"></i>Cancel</button>
 
     </form>
     <table>
@@ -34,13 +15,13 @@ include 'includes/nav/klantnav.inc.php';
             <th>Amount</th>
         </tr>
         <tr>
-            <td data-label="Naam">The Witcher</td>
+            <td data-label="Title">The Witcher</td>
             <td data-label="Schrijver">Andrzej Sapkowski</td>
             <td data-label="Genre">Fantasy</td>
             <td data-label="ISBN">9788090091252</td>
-            <td data-label="Taal">English</td>
-            <td data-label="Aantal Pagina's">288</td>
-            <td data-label="Aantal exemplaren">1</td>
+            <td data-label="Language">English</td>
+            <td data-label="Pages">288</td>
+            <td data-label="Amount">1</td>
         </tr>
     </table>
 </div>
@@ -52,8 +33,4 @@ include 'includes/nav/klantnav.inc.php';
     <p>
         The Last Wish, by Andrzej Sapkowski, is a collection of short stories in the fantasy genre, although it borrows heavily from the folk and fairy tale tradition, as well. The collection was first published in Polish in 1993, although several stories had previously been published as part of a separate collection in 1990. Along with a series of short story collections and novels, The Last Wish is part of the Witcher saga. Subtitled Introducing the Witcher, this collection takes place before the rest of the saga of Geralt of Rivia, the eponymous Witcher.
     </p>
-
 </div>
-</body>
-</html>
-

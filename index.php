@@ -1,12 +1,14 @@
 <?php
 session_start();
-session_unset();
+
 
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
+
 }
 else{
     $page = 'home';
+
 }
 ?>
 
@@ -21,9 +23,10 @@ else{
 <body>
 <?php
 include 'includes/nav/homenav.inc.php';
-?>
-<?php
+
 include 'includes/contents/'. $page .'.inc.php';
+
+echo $_SESSION['role'];
 ?>
 </body>
 </html>

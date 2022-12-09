@@ -18,7 +18,7 @@ if ($_SESSION['role'] != 'Admin'){
 include 'includes/nav/adminnav.inc.php';
 ?>
 <div class="Table,con">
-    <form action="PHP/action.php" method="post" id="search">
+    <form action="actions/action.php" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
         <button class="LendB" type="button"> <i class="fa fa-fw fa-trash"></i>Delete</button>
     </form>

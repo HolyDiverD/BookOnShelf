@@ -18,7 +18,7 @@ if ($_SESSION['role'] != 'Admin') {
 include 'includes/nav/adminnav.inc.php';
 ?>
 <div class="Table,con">
-    <form action="PHP/action.php" method="post" id="search">
+    <form action="actions/action.php" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
     </form>
     <table>
@@ -43,7 +43,7 @@ include 'includes/nav/adminnav.inc.php';
     </table>
 </div>
 <div class="Bio">
-    <form action="PHP/action.php" method="post" id="Add">
+    <form action="actions/action.php" method="post" id="Add">
         <label for="title"><b>Edit</b></label>
         <input type="text" placeholder="Enter Title" name="title" required>
     </form>

@@ -7,26 +7,53 @@ $menuitems = array(
         'Login' => array(
                 'login',
                 'sign-in'
+        ),
+        'Register' => array(
+                'register',
+                'user-circle'
+        ),
+        'Selection' => array(
+                'selection',
+                'search'
         )
+);
+$klantitems = array(
+    'Home' => array(
+        'home',
+        'home'
+    ),
+    'Overview' => array(
+        'klant',
+        'list'
+    ),
+    'Borrowed Books' => array(
+        'borrowed',
+        'shopping-basket'
+    ),
+    'Reservations' => array(
+        'reservations',
+        'list'
+    )
 );
 
 
-echo '<div class="navbar">';
+if ($_SESSION['role'] = 'null') {
+    echo '<div class="navbar">';
 
-foreach($menuitems as $label => $link) {
-    echo '<a href="index.php?page='. $link[0] .'"><i class="fa fa-fw fa-'.$link[1] .'"></i>'. $label .'</a>';
+    foreach ($menuitems as $label => $link) {
+        echo '<a href="index.php?page=' . $link[0] . '"><i class="fa fa-fw fa-' . $link[1] . '"></i>' . $label . '</a>';
+    }
+
+    echo '</div>';
 }
+elseif ($_SESSION['role'] = 'Klant'){
+    echo '<div class="navbar">';
 
-echo '</div>';
-?>
+    foreach($klantitems as $label => $link) {
+        echo '<a href="index.php?page='. $link[0] .'"><i class="fa fa-fw fa-'.$link[1] .'"></i>'. $label .'</a>';
+    }
 
-<div class="navbar">
-    <a href="index.php?page=home"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="index.php?page=login"><i class="fa fa-fw fa-sign-in"></i> Login</a>
-    <a href="Register.php"><i class="fa fa-fw fa-user-circle"></i> Register</a>
-    <a href="Selection.php"><i class="fa fa-fw fa-search"></i> Selection</a>
-    <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-    <a href="#"><i class="fa fa-fw fa-info-circle"></i> Info</a>
-</div>
+    echo '</div>';
+}
 
 
