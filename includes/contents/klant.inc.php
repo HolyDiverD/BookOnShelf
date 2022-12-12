@@ -3,7 +3,7 @@
     <form action="../../actions/action.php" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
         <button class="LendB" type="button"> <i class="fa fa-fw fa-shopping-basket"></i>Borrow</button>
-        <button class="ReserveB" type="button"> <i class="fa fa-fw fa-list"></i>Reserve</button>
+        <button class="LendB" type="button"> <i class="fa fa-fw fa-list"></i>Reserve</button>
     </form>
     <table>
         <tr>

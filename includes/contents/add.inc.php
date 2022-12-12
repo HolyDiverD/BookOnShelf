@@ -1,24 +1,5 @@
-<?php
-session_start();
-if ($_SESSION['role'] != 'Admin') {
-    header('Location: Login.php');
-}
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Book On Shelf</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="CSS/Style.css">
-</head>
-<body>
-<?php
-include 'includes/nav/adminnav.inc.php';
-?>
 <div class="Table,con">
-    <form action="actions/action.php" method="post" id="search">
+    <form action="../../actions/action.php" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
     </form>
     <table>
@@ -43,7 +24,7 @@ include 'includes/nav/adminnav.inc.php';
     </table>
 </div>
 <div class="Bio">
-    <form action="actions/action.php" method="post" id="Add">
+    <form action="../../actions/action.php" method="post" id="Add">
         <label for="title"><b>Title</b></label>
         <input type="text" placeholder="Enter Title" name="title" required>
 
@@ -67,5 +48,3 @@ include 'includes/nav/adminnav.inc.php';
     </form>
     <button class="loginsubmit" type="submit" form="Add">Add</button>
 </div>
-</body>
-</html>

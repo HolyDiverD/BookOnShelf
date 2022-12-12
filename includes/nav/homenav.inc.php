@@ -35,9 +35,27 @@ $klantitems = array(
         'list'
     )
 );
+$adminitems = array(
+    'Home' => array(
+        'home',
+        'home'
+    ),
+    'Overview' => array(
+        'admin',
+        'list'
+    ),
+    'Add' => array(
+        'add',
+        'shopping-basket'
+    ),
+    'Edit' => array(
+        'edit',
+        'list'
+    )
+);
 
 
-if ($_SESSION['role'] = 'null') {
+if ($_SESSION['role'] == 'null') {
     echo '<div class="navbar">';
 
     foreach ($menuitems as $label => $link) {
@@ -46,7 +64,7 @@ if ($_SESSION['role'] = 'null') {
 
     echo '</div>';
 }
-elseif ($_SESSION['role'] = 'Klant'){
+elseif ($_SESSION['role'] == 'Klant'){
     echo '<div class="navbar">';
 
     foreach($klantitems as $label => $link) {
@@ -55,5 +73,15 @@ elseif ($_SESSION['role'] = 'Klant'){
 
     echo '</div>';
 }
+elseif ($_SESSION['role'] == 'Admin'){
+    echo '<div class="navbar">';
+
+    foreach($adminitems as $label => $link) {
+        echo '<a href="index.php?page='. $link[0] .'"><i class="fa fa-fw fa-'.$link[1] .'"></i>'. $label .'</a>';
+    }
+
+    echo '</div>';
+}
+
 
 
