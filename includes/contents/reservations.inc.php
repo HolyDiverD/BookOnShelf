@@ -1,11 +1,11 @@
 <div class="Table,con">
-    <form action="PHP/action.php" method="post" id="search">
+    <form action="../../actions/action.php" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
         <button class="LendB" type="button"> <i class="fa fa-fw fa-trash"></i>Cancel</button>
 
     </form>
     <table>
-        <tr class="TH">
+        <tr>
             <th>Title</th>
             <th>Writer</th>
             <th>Genre</th>
@@ -26,7 +26,7 @@
     </table>
 </div>
 <div class="Bio">
-    <img src="Image/TW.png" rel="The Witcher">
+    <img src="../../Image/TW.png" rel="The Witcher">
     <h1>
         The Witcher: The Last Wish
     </h1>

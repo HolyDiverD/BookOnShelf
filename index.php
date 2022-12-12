@@ -26,7 +26,7 @@ include 'includes/nav/homenav.inc.php';
 
 include 'includes/contents/'. $page .'.inc.php';
 
-echo $_SESSION['role'];
+
 ?>
 </body>
 </html>
