@@ -1,21 +1,21 @@
 <?php
 $menuitems = array(
-        'Home' => array(
-                'home',
-                'home'
-        ),
-        'Login' => array(
-                'login',
-                'sign-in'
-        ),
-        'Register' => array(
-                'register',
-                'user-circle'
-        ),
-        'Selection' => array(
-                'selection',
-                'search'
-        )
+    'Home' => array(
+        'home',
+        'home'
+    ),
+    'Login' => array(
+        'login',
+        'sign-in'
+    ),
+    'Register' => array(
+        'register',
+        'user-circle'
+    ),
+    'Selection' => array(
+        'selection',
+        'search'
+    )
 );
 $klantitems = array(
     'Home' => array(
@@ -63,21 +63,19 @@ if ($_SESSION['role'] == 'null') {
     }
 
     echo '</div>';
-}
-elseif ($_SESSION['role'] == 'Klant'){
+} elseif ($_SESSION['role'] == 'Klant') {
     echo '<div class="navbar">';
 
-    foreach($klantitems as $label => $link) {
-        echo '<a href="index.php?page='. $link[0] .'"><i class="fa fa-fw fa-'.$link[1] .'"></i>'. $label .'</a>';
+    foreach ($klantitems as $label => $link) {
+        echo '<a href="index.php?page=' . $link[0] . '"><i class="fa fa-fw fa-' . $link[1] . '"></i>' . $label . '</a>';
     }
 
     echo '</div>';
-}
-elseif ($_SESSION['role'] == 'Admin'){
+} elseif ($_SESSION['role'] == 'Admin') {
     echo '<div class="navbar">';
 
-    foreach($adminitems as $label => $link) {
-        echo '<a href="index.php?page='. $link[0] .'"><i class="fa fa-fw fa-'.$link[1] .'"></i>'. $label .'</a>';
+    foreach ($adminitems as $label => $link) {
+        echo '<a href="index.php?page=' . $link[0] . '"><i class="fa fa-fw fa-' . $link[1] . '"></i>' . $label . '</a>';
     }
 
     echo '</div>';

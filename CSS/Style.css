@@ -11,7 +11,6 @@ body {
 
 }
 
-
 .navbar a {
     float: left;
     text-align: center;
@@ -26,11 +25,11 @@ body {
     background-color: rgba(210, 208, 208, 0.19);
 }
 
-
+/*
 .active {
     background-color: #910002;
 }
-
+*/
 
 @media screen and (max-width: 500px) {
     .navbar a {
@@ -115,7 +114,7 @@ input {
     width: 65%;
     border-radius: 5px;
     float: left;
-    overflow-x:auto;
+    overflow-x: auto;
 }
 
 table {
@@ -145,14 +144,15 @@ table {
     max-width: 75%;
     max-height: 50%;
 }
-.CustomerSearch{
+
+.CustomerSearch {
     font-family: Arial, FontAwesome;
     width: 40%;
     float: left;
 
 }
 
-.LendB{
+.LendB {
     box-sizing: border-box;
     padding: 12px 20px;
     background-color: #910002;
@@ -163,7 +163,7 @@ table {
     margin: 8px 0 0 25px;
 }
 
-table tr :hover{
+table tr :hover {
     background-color: grey;
 }
 

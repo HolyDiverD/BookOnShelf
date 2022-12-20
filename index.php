@@ -1,22 +1,23 @@
 <?php
 session_start();
 
+include '../private/conn_BOS.php';
+
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
-}
-else {
+} else {
     $page = 'home';
     $_SESSION['role'] = 'null';
 }
 
-if ($page == 'home' && $_SESSION['role'] == 'Klant'){
+if ($page == 'home' && $_SESSION['role'] == 'Klant') {
     $_SESSION['role'] = 'null';
 }
-if ($page == 'home' && $_SESSION['role'] == 'Admin'){
+if ($page == 'home' && $_SESSION['role'] == 'Admin') {
     $_SESSION['role'] = 'null';
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,8 +31,6 @@ if ($page == 'home' && $_SESSION['role'] == 'Admin'){
 include 'includes/nav/homenav.inc.php';
 
 include 'includes/contents/' . $page . '.inc.php';
-
-
 ?>
 </body>
 </html>
