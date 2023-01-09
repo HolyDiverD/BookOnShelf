@@ -16,6 +16,12 @@ if ($page == 'home' && $_SESSION['role'] == 'Klant') {
 if ($page == 'home' && $_SESSION['role'] == 'Admin') {
     $_SESSION['role'] = 'null';
 }
+if ($page == '' && $_SESSION['role'] == 'Admin'){
+    $page = 'admin';
+}
+if ($page == '' && $_SESSION['role'] == 'Klant'){
+    $page = 'klant';
+}
 
 ?>
 <!DOCTYPE html>

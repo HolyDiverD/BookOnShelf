@@ -5,7 +5,6 @@
 
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
-
     </form>
     <button class="loginsubmit" type="submit" form="Login">Login</button>
 </div>
