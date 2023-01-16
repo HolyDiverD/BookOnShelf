@@ -1,5 +1,5 @@
 <div class="Table,con">
-    <form action="PHP/action.php" method="post" id="search">
+    <form action="" method="post" id="search">
         <input placeholder="&#xF002; Search" class="searchbar" type="search" name="search">
     </form>
     <table>

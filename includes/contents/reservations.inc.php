@@ -1,5 +1,5 @@
 <div class="Table,con">
-    <form action="../../actions/action.php" method="post" id="search">
+    <form action="../../actions/registeraction.php" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
         <button class="LendB" type="button"><i class="fa fa-fw fa-trash"></i>Cancel</button>
 

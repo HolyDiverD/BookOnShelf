@@ -1,5 +1,5 @@
 <div class="Table,con">
-    <form action="PHP/action.php" method="post" id="search">
+    <form action="" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
         <button class="LendB" type="button"><i class="fa fa-fw fa-arrow-circle-left"></i>Hand in</button>
 

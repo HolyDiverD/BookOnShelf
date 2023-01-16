@@ -1,11 +1,12 @@
 <?php
 session_start();
 
-include '../private/conn_BOS.php';
+require '../private/conn_BOS.php';
 
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
-} else {
+}
+else {
     $page = 'home';
     $_SESSION['role'] = 'null';
 }
@@ -13,14 +14,21 @@ if (isset($_GET['page'])) {
 if ($page == 'home' && $_SESSION['role'] == 'Klant') {
     $_SESSION['role'] = 'null';
 }
+
 if ($page == 'home' && $_SESSION['role'] == 'Admin') {
     $_SESSION['role'] = 'null';
 }
+
 if ($page == '' && $_SESSION['role'] == 'Admin'){
     $page = 'admin';
 }
+
 if ($page == '' && $_SESSION['role'] == 'Klant'){
     $page = 'klant';
+}
+
+if ($page == '' && $_SESSION['role'] == 'null'){
+    $page = 'home';
 }
 
 ?>
