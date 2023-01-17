@@ -165,8 +165,13 @@ table {
 }
 
 table tr :hover {
-    background-color: grey;
+    background-color: brown;
+    color: #FFF;
 }
 
+.selected {
+    background-color: brown;
+    color: #FFF;
+}
 
 

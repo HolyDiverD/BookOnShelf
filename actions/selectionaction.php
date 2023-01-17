@@ -19,7 +19,7 @@ $sth->execute();
 while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
 
     echo "
-            <tr>
+            <tr id='tst'>
                 <td data-label='title'>$row->book_title</td>
                 <td data-label='Writer'>$row->book_writer</td>
                 <td data-label='Genre'>$row->book_genre</td>

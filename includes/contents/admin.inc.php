@@ -1,10 +1,10 @@
 <div class="Table,con">
     <form action="" method="post" id="search">
         <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
-        <button class="LendB" type="button"><i class="fa fa-fw fa-trash"></i>Delete</button>
+        <button class="LendB" id="tst" type="button"><i class="fa fa-fw fa-trash" onclick="fnselect()"></i>Delete</button>
     </form>
-    <table>
-        <tr class="TH">
+    <table id = table>
+        <tr>
             <th>Title</th>
             <th>Writer</th>
             <th>Genre</th>
@@ -17,6 +17,10 @@
         include 'actions/selectionaction.php'
         ?>
     </table>
+    <input type="button" id="tst" value="OK" onclick="fnselect()" />
+
+    <script src="scripts/tableselect.js"></script>
+
 </div>
 <div class="Bio">
     <img src="Image/TW.png" rel="The Witcher">
