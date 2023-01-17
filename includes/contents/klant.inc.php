@@ -15,19 +15,7 @@
             <th>Amount</th>
         </tr>
         <?php
-        for ($i = 0; $i <= 11; $i++) {
-            ?>
-            <tr>
-                <td data-label="Title">The Witcher</td>
-                <td data-label="Writer">Andrzej Sapkowski</td>
-                <td data-label="Genre">Fantasy</td>
-                <td data-label="ISBN">9788090091252</td>
-                <td data-label="Language">English</td>
-                <td data-label="Pages">288</td>
-                <td data-label="Amount">5</td>
-            </tr>
-            <?php
-        }
+       include 'actions/selectionaction.php'
         ?>
     </table>
 </div>

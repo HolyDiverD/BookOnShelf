@@ -14,15 +14,9 @@
             <th>Pages</th>
             <th>Amount</th>
         </tr>
-        <tr>
-            <td data-label="Naam">The Witcher</td>
-            <td data-label="Schrijver">Andrzej Sapkowski</td>
-            <td data-label="Genre">Fantasy</td>
-            <td data-label="ISBN">9788090091252</td>
-            <td data-label="Taal">English</td>
-            <td data-label="Aantal Pagina's">288</td>
-            <td data-label="Aantal exemplaren">1</td>
-        </tr>
+        <?php
+        include 'actions/selectionaction.php'
+        ?>
     </table>
 </div>
 <div class="Bio">
