@@ -1,19 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "basri";
-$password = "basri123";
+require '../private/conn_BOS.php';
 
-//pdo connection
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=bos", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
-
-$sth = $conn->prepare("SELECT ID, book_title, book_writer, book_genre, book_isbn, book_lan, book_pages, book_amount FROM books");
+$sth = $dbh->prepare("SELECT ID, book_title, book_writer, book_genre, book_isbn, book_lan, book_pages, book_amount FROM books");
 $sth->execute();
 
 while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
@@ -27,8 +15,9 @@ while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
                 <td data-label='Language'>$row->book_lan</td>
                 <td data-label='Pages'>$row->book_pages</td>
                 <td data-label='Amount'>$row->book_amount</td>
+                 <form action='deleteaction.php' method='post' id='$row->ID'>
+                <td data-label='Delete'><button  class='lendB' id='$row->ID' type='button'><i class='fa fa-fw fa-trash'></i>Delete</button></td>
+                </form>
             </tr>";
+
 }
-
-
-
