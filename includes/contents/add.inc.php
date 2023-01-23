@@ -1,7 +1,5 @@
 <div class="Table,con">
-    <form action="../../actions/loginaction.php" method="post" id="search">
-        <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
-    </form>
+
     <table>
         <tr class="TH">
             <th>Title</th>
@@ -22,22 +20,34 @@
         <label for="title"><b>Title</b></label>
         <input type="text" placeholder="Enter Title" name="title" required>
 
-        <label for="writer"><b>Writer</b></label>
+        <label for="writer">
+            <b>Writer</b>
+        </label>
         <input type="text" placeholder="Enter Writer" name="writer" required>
 
-        <label for="genre"><b>Genre</b></label>
+        <label for="genre">
+            <b>Genre</b>
+        </label>
         <input type="text" placeholder="Enter Genre" name="genre" required>
 
-        <label for="isbn"><b>ISBN</b></label>
+        <label for="isbn">
+            <b>ISBN</b>
+        </label>
         <input type="text" placeholder="Enter ISBN" name="isbn" required>
 
-        <label for="lan"><b>Language</b></label>
+        <label for="lan">
+            <b>Language</b>
+        </label>
         <input type="text" placeholder="Enter Language" name="lan" required>
 
-        <label for="pgs"><b>Pages</b></label>
+        <label for="pgs">
+            <b>Pages</b>
+        </label>
         <input type="text" placeholder="Enter Pages" name="pgs" required>
 
-        <label for="cps"><b>Copies</b></label>
+        <label for="cps">
+            <b>Copies</b>
+        </label>
         <input type="text" placeholder="Enter Copies" name="cps" required>
     </form>
     <button class="loginsubmit" type="submit" form="Add">Add</button>

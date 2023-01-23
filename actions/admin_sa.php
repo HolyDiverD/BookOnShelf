@@ -7,7 +7,7 @@ $sth->execute();
 while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
 
     echo "
-            <tr id='$row->ID'>
+            <tr>
                 <td id='$row->ID' data-label='title'>$row->book_title</td>
                 <td data-label='Writer'>$row->book_writer</td>
                 <td data-label='Genre'>$row->book_genre</td>
@@ -15,9 +15,13 @@ while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
                 <td data-label='Language'>$row->book_lan</td>
                 <td data-label='Pages'>$row->book_pages</td>
                 <td data-label='Amount'>$row->book_amount</td>
-                 <form action='deleteaction.php' method='post' id='$row->ID'>
-                <td data-label='Delete'><button  class='lendB' id='$row->ID' type='button'><i class='fa fa-fw fa-trash'></i>Delete</button></td>
-                </form>
+                <td data-label='Delete'>
+                <a href='actions/deleteaction.php?id=$row->ID'/>
+                Delete
+                </td>
+                <td data-label='Edit'>
+                <a href='index.php?page=edit&ID=$row->ID&title=$row->book_title&writer=$row->book_writer&genre=$row->book_genre&isbn=$row->book_isbn&lan=$row->book_lan&pages=$row->book_pages&amount=$row->book_amount'/>
+                Edit
+                </td>          
             </tr>";
-
 }

@@ -9,6 +9,7 @@
             <th>Pages</th>
             <th>Amount</th>
             <th>Delete</th>
+            <th>Edit</th>
         </tr>
         <?php
         include 'actions/admin_sa.php'

@@ -75,7 +75,7 @@ if ($_SESSION['role'] == 'null') {
     echo '<div class="navbar">';
 
     foreach ($adminitems as $label => $link) {
-        echo '<a href="index.php?page=' . $link[0] . '"><i class="fa fa-fw fa-' . $link[1] . '"></i>' . $label . '</a>';
+        echo '<a href="index.php?page=' . $link[0] . '&ID&title&writer&genre&isbn&lan&pages&amount"><i class="fa fa-fw fa-' . $link[1] . '"></i>' . $label . '</a>';
     }
 
     echo '</div>';

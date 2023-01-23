@@ -1,7 +1,5 @@
 <div class="Table,con">
-    <form action="../../actions/loginaction.php" method="post" id="search">
-        <input placeholder="&#xF002; Search" class="CustomerSearch" type="search" name="search">
-    </form>
+
     <table>
         <tr class="TH">
             <th>Title</th>
@@ -16,12 +14,49 @@
         include 'actions/selectionaction.php'
         ?>
     </table>
-</div>
+        <?php
+echo '</div>
 <div class="Bio">
-    <form action="../../actions/loginaction.php" method="post" id="Add">
-        <label for="title"><b>Edit</b></label>
-        <input type="text" placeholder="Enter Title" name="title" required>
-    </form>
-    <button class="loginsubmit" type="submit" form="Add">Enter</button>
+    <form action="actions/editaction.php?ID='.$_GET['ID'].'" method="post" id="Add">
+        <label for="title">
+            <b>Title</b>
+        </label>
+        <input type="text" placeholder="Enter Title" name="title" value="'.$_GET['title'].'" required>
 
-</div>
+        <label for="writer">
+            <b>Writer</b>
+        </label>
+        <input type="text" placeholder="Enter Writer" name="writer" value="'.$_GET['writer'].'" required>
+
+        <label for="genre">
+            <b>Genre</b>
+        </label>
+        <input type="text" placeholder="Enter Genre" name="genre" value="'.$_GET['genre'].'" required>
+
+        <label for="isbn">
+            <b>ISBN</b>
+        </label>
+        <input type="text" placeholder="Enter ISBN" name="isbn" value="'.$_GET['isbn'].'" required>
+
+        <label for="lan">
+            <b>Language</b>
+        </label>
+        <input type="text" placeholder="Enter Language" name="lan" value="'.$_GET['lan'].'" required>
+
+        <label for="pgs">
+            <b>Pages</b>
+        </label>
+        <input type="text" placeholder="Enter Pages" name="pgs" value="'.$_GET['pages'].'" required>
+
+        <label for="cps">
+            <b>Copies</b>
+        </label>
+        <input type="text" placeholder="Enter Copies" name="cps" value="'.$_GET['amount'].'" required>
+
+    </form>
+    <button class="loginsubmit" type="submit" form="Add">
+        Edit
+    </button>
+
+</div>';
+?>
