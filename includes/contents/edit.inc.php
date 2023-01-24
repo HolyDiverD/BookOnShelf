@@ -46,13 +46,12 @@ echo '</div>
         <label for="pgs">
             <b>Pages</b>
         </label>
-        <input type="text" placeholder="Enter Pages" name="pgs" value="'.$_GET['pages'].'" required>
+        <input type="number" placeholder="Enter Pages" name="pages" value="'.$_GET['pages'].'" required>
 
         <label for="cps">
             <b>Copies</b>
         </label>
-        <input type="text" placeholder="Enter Copies" name="cps" value="'.$_GET['amount'].'" required>
-
+        <input type="number" placeholder="Enter Copies" name="amount" value="'.$_GET['amount'].'" required>
     </form>
     <button class="loginsubmit" type="submit" form="Add">
         Edit

@@ -2,7 +2,7 @@
 session_start();
 require '../../private/conn_BOS.php';
 
-$id = $_GET['ID'];
+$id = $_GET['id'];
 
 try {
     $sth = $dbh->prepare("

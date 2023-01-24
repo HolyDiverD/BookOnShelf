@@ -1,4 +1,5 @@
 <?php
+
 require '../private/conn_BOS.php';
 
 $sth = $dbh->prepare("SELECT ID, book_title, book_writer, book_genre, book_isbn, book_lan, book_pages, book_amount FROM books");
@@ -15,8 +16,9 @@ while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
                 <td data-label='Language'>$row->book_lan</td>
                 <td data-label='Pages'>$row->book_pages</td>
                 <td data-label='Amount'>$row->book_amount</td>
-            </tr>";
-}
-
-
-
+                <td data-label='Borrow'>
+                <a href=''/>
+                Cancel
+                </td>
+              
+            </tr>";}
