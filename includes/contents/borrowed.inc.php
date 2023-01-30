@@ -2,17 +2,14 @@
 
     <table>
         <tr class="TH">
-            <th>Title</th>
-            <th>Writer</th>
-            <th>Genre</th>
-            <th>ISBN</th>
-            <th>Language</th>
-            <th>Pages</th>
-            <th>Amount</th>
+            <th>Id</th>
+            <th>User</th>
+            <th>Start date</th>
+            <th>End date</th>
             <th>Hand in</th>
         </tr>
         <?php
-        include 'actions/borrow_sa.php'
+        include 'actions/sa/borrow_sa.php'
         ?>
     </table>
 </div>

@@ -12,7 +12,7 @@
             <th>Edit</th>
         </tr>
         <?php
-        include 'actions/admin_sa.php'
+        include 'actions/sa/admin_sa.php'
         ?>
     </table>
 </div>

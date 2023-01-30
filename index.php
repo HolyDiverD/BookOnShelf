@@ -13,6 +13,7 @@ else {
 
 if ($page == 'home' && $_SESSION['role'] == 'Klant') {
     $_SESSION['role'] = 'null';
+    $_SESSION['Userid'] = 'null';
 }
 
 if ($page == 'home' && $_SESSION['role'] == 'Admin') {

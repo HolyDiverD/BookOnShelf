@@ -1,6 +1,6 @@
 <?php
 
-require '../../private/conn_BOS.php';
+require '../../../private/conn_BOS.php';
 
 $title = $_POST['title'];
 $writer = $_POST['writer'];
@@ -37,4 +37,4 @@ $sth->execute([
     ':amount' => $amount
 ]);
 
-header('Location: ../index.php?page=');
+header('Location: ../../index.php?page=');

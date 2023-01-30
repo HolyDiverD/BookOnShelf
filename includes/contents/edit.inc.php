@@ -11,13 +11,13 @@
             <th>Amount</th>
         </tr>
         <?php
-        include 'actions/selectionaction.php'
+        include 'actions/action/selectionaction.php'
         ?>
     </table>
         <?php
 echo '</div>
 <div class="Bio">
-    <form action="actions/editaction.php?ID='.$_GET['ID'].'" method="post" id="Add">
+    <form action="actions/action/editaction.php?ID='.$_GET['ID'].'" method="post" id="Add">
         <label for="title">
             <b>Title</b>
         </label>

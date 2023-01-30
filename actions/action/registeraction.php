@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require '../../private/conn_BOS.php';
+require '../../../private/conn_BOS.php';
 
 $email = $_POST['email'];
 $password = $_POST['pswr'];
@@ -14,7 +14,6 @@ $street = $_POST['strt'];
 $hnmbr = $_POST['hnmbr'];
 $postcode = $_POST['postcode'];
 $dob = $_POST['dob'];
-
 
 $sql = 'INSERT INTO users (user_email,
                    user_psw, 

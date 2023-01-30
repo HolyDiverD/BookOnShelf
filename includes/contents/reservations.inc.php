@@ -13,7 +13,7 @@
             <th>Cancel</th>
         </tr>
         <?php
-        include 'actions/reserve_sa.php'
+        include 'actions/sa/reserve_sa.php'
         ?>
     </table>
 </div>

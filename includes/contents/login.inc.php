@@ -1,5 +1,5 @@
 <div class="Logincontainer">
-    <form action="actions/loginaction.php" method="post" id="Login">
+    <form action="actions/action/loginaction.php" method="post" id="Login">
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required>
 

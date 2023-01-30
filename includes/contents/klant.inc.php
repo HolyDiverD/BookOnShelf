@@ -13,7 +13,7 @@
             <th>Reserve</th>
         </tr>
         <?php
-       include 'actions/klant_sa.php'
+        include 'actions/sa/klant_sa.php'
         ?>
     </table>
 

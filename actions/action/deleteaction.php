@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../../private/conn_BOS.php';
+require '../../../private/conn_BOS.php';
 
 $id = $_GET['id'];
 
@@ -16,5 +16,5 @@ try {
     print "Error!: " . $exception->getMessage() . "<br/>";
 
 }
-header('Location: ../index.php?page=');
+header('Location: ../../index.php?page=');
 

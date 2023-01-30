@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../../private/conn_BOS.php';
+require '../../../private/conn_BOS.php';
 $id = $_GET['ID'];
 $title = $_POST['title'];
 $writer = $_POST['writer'];
@@ -37,4 +37,4 @@ WHERE ID = :id or book_isbn = :isbn");
     print "Error!: " . $exception->getMessage() . "<br/>";
 
 }
-header('Location: ../index.php?page=');
+header('Location: ../../index.php?page=');

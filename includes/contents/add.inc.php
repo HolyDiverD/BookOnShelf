@@ -11,12 +11,12 @@
             <th>Amount</th>
         </tr>
         <?php
-        include 'actions/selectionaction.php'
+        include 'actions/action/selectionaction.php'
         ?>
     </table>
 </div>
 <div class="Bio">
-    <form action="actions/addaction.php" method="post" id="Add">
+    <form action="actions/action/addaction.php" method="post" id="Add">
         <label for="title"><b>Title</b></label>
         <input type="text" placeholder="Enter Title" name="title" required>
 
