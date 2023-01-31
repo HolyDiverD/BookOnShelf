@@ -6,8 +6,10 @@ $id = $_GET['id'];
 
 try {
     $sth = $dbh->prepare("
-        DELETE FROM book_genre WHERE book_id = :id;
-        DELETE FROM books WHERE ID = :id;
+        DELETE FROM book_genre 
+               WHERE book_id = :id;
+        DELETE FROM books 
+               WHERE ID = :id;
     ");
     $sth->execute([
         ":id" => $id,

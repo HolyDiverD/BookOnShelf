@@ -4,7 +4,10 @@ require '../private/conn_BOS.php';
 
 $user = $_SESSION['Userid'];
 
-$sth = $dbh->prepare("SELECT borrow_id, FKbook_id, FKuser_id, startdate, enddate FROM borrowed WHERE FKuser_id = :user");
+$sth = $dbh->prepare("
+SELECT borrow_id, FKbook_id, FKuser_id, startdate, enddate 
+FROM borrowed 
+WHERE FKuser_id = :user");
 $sth->execute([
     $user => ":user"
 ]);
