@@ -18,6 +18,7 @@ if ($page == 'home' && $_SESSION['role'] == 'Klant') {
 
 if ($page == 'home' && $_SESSION['role'] == 'Admin') {
     $_SESSION['role'] = 'null';
+    $_SESSION['Userid'] = 'null';
 }
 
 if ($page == '' && $_SESSION['role'] == 'Admin'){
