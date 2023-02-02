@@ -10,7 +10,7 @@ $lan = $_POST['lan'];
 $pages = $_POST['pages'];
 $amount = $_POST['amount'];
 try {
-    if ($amount > 0) {
+    if ($amount >= 0) {
         $sth = $dbh->prepare("UPDATE books
 SET book_title = :title,
     book_writer = :writer,

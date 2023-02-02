@@ -3,13 +3,10 @@
     </form>
     <table>
         <tr>
-            <th>Title</th>
-            <th>Writer</th>
-            <th>Genre</th>
-            <th>ISBN</th>
-            <th>Language</th>
-            <th>Pages</th>
-            <th>Amount</th>
+            <th>Reservation</th>
+            <th>Book</th>
+            <th>User</th>
+            <th>Start date</th>
             <th>Cancel</th>
         </tr>
         <?php

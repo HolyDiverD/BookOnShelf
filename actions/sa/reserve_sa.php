@@ -1,22 +1,18 @@
 <?php
-
 require '../private/conn_BOS.php';
 
-$sth = $dbh->prepare("SELECT ID, book_title, book_writer, book_genre, book_isbn, book_lan, book_pages, book_amount FROM books");
+$sth = $dbh->prepare("SELECT reserve_id, FKbook_id, FKuser_id, startdate FROM reserve");
 $sth->execute();
 
 while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
 
     echo "
-            <tr id='$row->ID'>
-                <td id='$row->ID' data-label='title'>$row->book_title</td>
-                <td data-label='Writer'>$row->book_writer</td>
-                <td data-label='Genre'>$row->book_genre</td>
-                <td data-label='ISBN'>$row->book_isbn</td>
-                <td data-label='Language'>$row->book_lan</td>
-                <td data-label='Pages'>$row->book_pages</td>
-                <td data-label='Amount'>$row->book_amount</td>
-                <td data-label='Borrow'>
+            <tr>
+                <td data-label='Reservation'>$row->reserve_id</td>
+                <td data-label='Book'>$row->FKbook_id</td>
+                <td data-label='User'>$row->FKuser_id</td>
+                <td data-label='Start date'>$row->startdate</td>
+                <td data-label='Cancel'>
                 <a href=''/>
                 Cancel
                 </td>
