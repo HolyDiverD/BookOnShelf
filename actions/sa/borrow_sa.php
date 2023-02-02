@@ -9,18 +9,18 @@ SELECT FKbook_id, FKuser_id, startdate, enddate
 FROM borrowed 
 WHERE FKuser_id = :user");
 $sth->execute([
-    $user => ":user"
+    ":user" => $user
 ]);
 
 while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
 
     echo "
-            <tr id='$row->borrow_id'>
-                <td id='$row->borrow_id' data-label='Id'>$row->FKbook_id</td>
+            <tr>
+                <td data-label='Book ID'>$row->FKbook_id</td>
                 <td data-label='User'>$row->FKuser_id</td>
                 <td data-label='Start date'>$row->startdate</td>
                 <td data-label='End date'>$row->enddate</td>
-                <a href=''/>
+                <td data-label='Hand in'><a href='actions/action/handinaction.php?bookID=$row->FKbook_id&user=$row->FKuser_id&startdate=$row->startdate'>
                 Hand in
                 </td>
               

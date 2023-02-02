@@ -2,7 +2,7 @@
 
     <table>
         <tr class="TH">
-            <th>Id</th>
+            <th>Book ID</th>
             <th>User</th>
             <th>Start date</th>
             <th>End date</th>

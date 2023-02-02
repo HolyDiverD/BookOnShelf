@@ -14,8 +14,8 @@ if($amount > 0) {
      
     ");
         $sth->execute([
-         $BookId => ":book",
-         $UserId => ":user"
+            ":book" => $BookId,
+            ":user" => $UserId
         ]);
     } catch (PDOException $exception) {
         print "Error!:" . $exception->getMessage() . "<br/>";
@@ -28,8 +28,8 @@ if($amount > 0) {
      WHERE ID = :book;
     ");
             $sth->execute([
-                $BookId => ":book",
-                $amount => ":amount"
+                ":book" => $BookId,
+                ":amount" => $amount
             ]);
 
 
@@ -37,5 +37,5 @@ if($amount > 0) {
             print "Error!:" . $exception->getMessage() . "<br/>";
 
         }
-    //header('Location: ../../index.php?page=');
+    header('Location: ../../index.php?page=');
 }

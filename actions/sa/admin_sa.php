@@ -16,7 +16,7 @@ while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
                 <td data-label='Pages'>$row->book_pages</td>
                 <td data-label='Amount'>$row->book_amount</td>
                 <td data-label='Delete'>
-                <a href='actions/deleteaction.php?id=$row->ID'/>
+                <a href='actions/action/deleteaction.php?id=$row->ID'/>
                 Delete
                 </td>
                 <td data-label='Edit'>

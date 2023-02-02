@@ -20,7 +20,7 @@ while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
                 Borrow
                 </td>
                 <td data-label='Reserve'>
-                <a href=''/>
+                <a href='actions/action/reserveaction.php?bookID=$row->ID&amount=$row->book_amount'/>
                 Reserve
                 </td>
             </tr>";
