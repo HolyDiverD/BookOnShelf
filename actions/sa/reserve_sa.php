@@ -13,7 +13,7 @@ while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
                 <td data-label='User'>$row->FKuser_id</td>
                 <td data-label='Start date'>$row->startdate</td>
                 <td data-label='Cancel'>
-                <a href=''/>
+                <a href='actions/action/reservecancel.php?reserveID=$row->reserve_id&user=$row->FKuser_id'/>
                 Cancel
                 </td>
               

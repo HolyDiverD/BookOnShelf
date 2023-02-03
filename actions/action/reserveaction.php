@@ -7,12 +7,10 @@ $BookId = $_GET['bookID'];
 $Amount = $_GET['amount'];
 $UserId = $_SESSION['Userid'];
 
-if ($Amount = 0){
+if ($Amount == 0){
     try {
         $sth = $dbh->prepare(" 
-     
      INSERT INTO reserve (FKbook_id, FKuser_id) VALUES (:book, :user)
-     
     ");
         $sth->execute([
             ":book" => $BookId,
@@ -23,5 +21,5 @@ if ($Amount = 0){
 
     }
 }
-//header('Location: ../../index.php?page=');
+header('Location: ../../index.php?page=reservations');
 
