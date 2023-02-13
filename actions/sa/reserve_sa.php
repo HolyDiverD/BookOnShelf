@@ -1,8 +1,11 @@
 <?php
-require '../private/conn_BOS.php';
 
-$sth = $dbh->prepare("SELECT reserve_id, FKbook_id, FKuser_id, startdate FROM reserve");
-$sth->execute();
+require '../private/conn_BOS.php';
+$user = $_SESSION['Userid'];
+$sth = $dbh->prepare("SELECT reserve_id, FKbook_id, FKuser_id, startdate FROM reserve WHERE FKuser_id = :user");
+$sth->execute([
+    ':user' => $user
+]);
 
 while ($row = $sth->fetch(PDO::FETCH_OBJ)) {
 
