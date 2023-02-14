@@ -6,7 +6,7 @@ $BookId = $_GET['id'];
 $amount = $_GET['amount'];
 $UserId = $_SESSION['Userid'];
 
-if($amount > 0) {
+if($amount > 0)  {
     try {
         $sth = $dbh->prepare(" 
      

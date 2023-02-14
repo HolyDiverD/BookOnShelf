@@ -79,4 +79,4 @@ if ($waiting_user) { // If someone is waiting for the book
 
 }
 
-header('Location: ../../index.php?page=');
+header('Location: ../../index.php?page=borrowed');
