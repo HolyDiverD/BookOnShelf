@@ -6,7 +6,15 @@ $BookId = $_GET['id'];
 $amount = $_GET['amount'];
 $UserId = $_SESSION['Userid'];
 
-if($amount > 0)  {
+$query = $dbh->prepare('SELECT COUNT(FKbook_id) as row_count FROM borrowed WHERE FKuser_id = ?');
+$query->bindParam(1, $UserId);
+$query->execute();
+
+$result = $query->fetch(PDO::FETCH_OBJ);
+
+$row_count = $result->row_count;
+
+if ($amount > 0 && $row_count < 3){
     try {
         $sth = $dbh->prepare(" 
      
@@ -39,3 +47,7 @@ if($amount > 0)  {
         }
     header('Location: ../../index.php?page=');
 }
+else{
+    header('Location: ../../index.php?page=');
+}
+
